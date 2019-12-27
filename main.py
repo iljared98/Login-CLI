@@ -53,10 +53,8 @@ def loginFunc():
 
     str = hashlib.sha256(passWord.encode('utf-8'))
     passHashed = str.hexdigest()
-
-
+    
     userSearch = nameHashed + " : " + passHashed
-    print(userSearch)
 
     # Could utilize a more elegant solution
     fobj = open("stored.txt")
@@ -71,7 +69,6 @@ def loginFunc():
         fobj.close()
         clearFunc()
         intro()
-
 
 def registerFunc():
     print("====== ISN Registration Form =======\n")
